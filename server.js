@@ -18,9 +18,6 @@ app.get('/', function (req, res) {
   
 
     request(url, function (err, response, body) {
-        //console.log(err);
-        //console.log(response);
-        console.log(body);
       if(err){
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
