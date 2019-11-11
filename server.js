@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
         if(weather.main == undefined){
           res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
-          let weatherText = `It's ${(5/9) * (weather.main.temp - 32)} degrees in ${weather.name}!`;
+          let weatherText = `It's ${(5/9) * (weather.main.temp - 32)} Degrees in ${weather.name}!`;
           res.render('index', {weather: weatherText, error: null});
           //res.json((5/9) * (weather.main.temp - 32));
         }
